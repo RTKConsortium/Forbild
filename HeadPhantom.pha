@@ -1,0 +1,776 @@
+
+/* 3-D Head Phantom */
+/* ================ */
+
+
+
+#include "TableOfTissues"
+#define DTMAT(dens) formel=H2O dichte=dens
+
+
+Phantom
+
+// original 2D phantom
+// -------------------
+
+{ "5" [Ellipsoid:        dx=9.6 dy=12   dz=12.5 ] DTMAT(1.800)  }
+{ "6" [Ellipsoid:        dx=9.0 dy=11.4 dz=11.9 ] DTMAT(1.050) }
+{ "12"[Ellipsoid: y=-3.6 dx=1.8 dy= 3.6 dz= 3.6 ] DTMAT(1.045) }
+{ "7" [Ellipsoid: y= 8.4 dx=1.8 dy= 3.0 dz= 3.0 ] DTMAT(0)}
+
+{ "1" [Sphere: x=-4.7  y= 4.3  z= 0.872 r=2.0] DTMAT(1.060) }
+{ "2" [Sphere: x= 4.7  y= 4.3  z= 0.872 r=2.0] DTMAT(1.060) }
+{ "3" [Sphere: x=-1.08 y=-9             r=0.4] DTMAT(1.0525) }
+{ "4" [Sphere: x= 1.08 y=-9             r=0.4] DTMAT(1.0475) }
+
+{ "14"[Ellipt_Cyl: y=3.6 dx=1.2 dy=4.0 l=0.5*cos(15)
+              achse(0,-cos(30),sin(30)) a_y(0,sin(30),cos(30))] DTMAT(1.800) }
+
+{ "15"[Ellipt_Cyl: y=9.6 dx=0.525561 dy=2. l=0.4
+              achse(1,0,0)             a_y(0,-sin(30),cos(30))] DTMAT(1.800) }
+
+{ "8" [Ellipsoid_free: x=-1.9 y=5.4 dx=1.206483*cos(15) 
+      dy=0.420276*cos(15) dz=3.0 
+      a_z(sin(15),0,cos(15)) 
+      a_x(cos(15)*cos(120),sin(120),-sin(15)*cos(120))] DTMAT(1.800) }
+
+{ "9" [Ellipsoid_free: x=1.9 y=5.4 dx=1.2*cos(15) dy=0.42*cos(15) dz=3.0   
+      a_z(-sin(15),0,cos(15)) 
+      a_x(cos(15)*cos(60),sin(60),sin(15)*cos(60))] DTMAT(1.800) }
+
+{ "10"[Ellipt_Cyl: x=-4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0  	 
+      achse(0,0,1) a_x(cos(150),sin(150),0) ] DTMAT(1.800) }
+
+{ "11"[Ellipt_Cyl: x=4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0 
+      achse(0,0,1) a_x(cos(30),sin(30),0) ] DTMAT(1.800) }
+
+{ "13"[Ellipsoid_free: x=6.393945 y=-6.393945 dx=1.2 dy=0.42 dz=1.2 
+       a_x(cos(58.1),sin(58.1),0) a_z(0,0,1)] DTMAT(1.055) }
+
+{ "16"[Cone_y: y=-11.15 z=-0.2  r1=0.5 r2=0.2 l=1.5 ] DTMAT(1.800) }
+{ "17"[Cone_y: y=-11.15 z= 0.2  r1=0.5 r2=0.2 l=1.5]  DTMAT(1.800) }
+
+
+
+// inner ear on the right side
+// ---------------------------
+{ [Ellipsoid: x=9.1 y=0.0 z=0.0 dx=4.2 dy=1.8 dz=1.8 x<9.1] DTMAT(1.800) }
+
+#define SHA 0.2*sqrt(3.)
+
+// Mid Level
+
+{ [Sphere: z=0 x=8.8 y=0.0 r=.15] DTMAT(0.0)  	} // air bubbles
+{ [Sphere: z=0 x=8.4 y=0.0 r=.15] DTMAT(0.0)  	} // air bubbles
+{ [Sphere: z=0 x=8.0 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+{ [Sphere: z=0 x=7.6 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+{ [Sphere: z=0 x=7.2 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+{ [Sphere: z=0 x=6.8 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+{ [Sphere: z=0 x=6.4 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+{ [Sphere: z=0 x=6.0 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+{ [Sphere: z=0 x=5.6 y=0.0 r=.15] DTMAT(0.0) 	} // air bubbles
+
+{ [Sphere: z=0 x=8.6 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.2 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.6 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.2 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=5.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=0 x=8.8 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.4 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.0 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.8 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.4 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.0 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=0 x=8.6 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.2 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.8 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.4 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.0 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.6 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=0 x=8.6 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.2 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.6 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.2 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=5.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=0 x=8.8 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.4 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.0 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.8 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.4 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.0 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=0 x=8.6 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=8.2 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.8 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.4 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=7.0 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=0 x=6.6 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+
+// upper level 1st floor
+
+{ [Sphere: z=SHA x=8.6 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.2 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.4 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.0 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.6 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.2 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=5.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=SHA x=8.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.6 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.2 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=SHA x=8.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.8 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.4 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.0 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=SHA x=8.8 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.4 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.0 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.6 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.2 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.8 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=SHA x=8.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.6 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.2 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=SHA x=8.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.8 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.4 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.0 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=SHA x=8.8 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.4 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=8.0 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.6 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=7.2 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=SHA x=6.8 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+
+// lower level 1st floor
+
+{ [Sphere: z=-SHA x=8.6 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.2 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.4 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.0 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.6 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.2 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=5.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-SHA x=8.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.6 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.2 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-SHA x=8.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.8 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.4 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.0 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-SHA x=8.8 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.4 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.0 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.6 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.2 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.8 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-SHA x=8.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.6 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.2 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-SHA x=8.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.8 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.4 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.0 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-SHA x=8.8 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.4 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=8.0 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.6 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=7.2 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-SHA x=6.8 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+
+// upper level 2nd floor
+
+{ [Sphere: z=2*SHA x=8.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.4 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.0 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.6 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.2 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.4 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.0 y=0 r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=2*SHA x=8.6 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.2 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.8 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.4 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.0 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.6 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.2 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=2*SHA x=8.8 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.4 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.0 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.6 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.2 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.8 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.4 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=2*SHA x=8.6 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.2 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.8 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.4 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.0 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=2*SHA x=8.6 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.2 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.8 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.4 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.0 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.6 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.2 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=2*SHA x=8.8 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.4 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.0 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.6 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.2 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.8 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=6.4 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=2*SHA x=8.6 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=8.2 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.8 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.4 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=2*SHA x=7.0 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+
+// lower level 2nd floor
+
+{ [Sphere: z=-2*SHA x=8.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.4 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.0 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.6 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.2 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.8 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.4 y=0 r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.0 y=0 r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-2*SHA x=8.6 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.2 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.8 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.4 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.0 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.6 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.2 y=SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-2*SHA x=8.8 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.4 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.0 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.6 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.2 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.8 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.4 y=2*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-2*SHA x=8.6 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.2 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.8 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.4 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.0 y=3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-2*SHA x=8.6 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.2 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.8 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.4 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.0 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.6 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.2 y=-SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-2*SHA x=8.8 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.4 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.0 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.6 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.2 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.8 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=6.4 y=-2*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-2*SHA x=8.6 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=8.2 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.8 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.4 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-2*SHA x=7.0 y=-3*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+
+// upper level 3rd floor
+
+{ [Sphere: z=3*SHA x=8.6 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.2 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.8 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.4 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.0 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=6.6 y=0  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=3*SHA x=8.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.6 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.2 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=6.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=3*SHA x=8.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.8 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.4 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.0 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=3*SHA x=8.8 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.4 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.0 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.6 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=3*SHA x=8.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.6 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.2 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=6.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=3*SHA x=8.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.8 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.4 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.0 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=3*SHA x=8.8 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.4 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=8.0 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=3*SHA x=7.6 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+
+// lower level 3rd floor
+
+{ [Sphere: z=-3*SHA x=8.6 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.2 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.8 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.4 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.0 y=0  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=6.6 y=0  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-3*SHA x=8.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.4 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.0 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.6 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.2 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=6.8 y=SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-3*SHA x=8.6 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.2 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.8 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.4 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.0 y=2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-3*SHA x=8.8 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.4 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.0 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.6 y=3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-3*SHA x=8.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.4 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.0 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.6 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.2 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=6.8 y=-SHA r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-3*SHA x=8.6 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.2 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.8 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.4 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.0 y=-2*SHA  r=.15] DTMAT(0.0) } // air bubbles
+
+{ [Sphere: z=-3*SHA x=8.8 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.4 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=8.0 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+{ [Sphere: z=-3*SHA x=7.6 y=-3*SHA r=.15] DTMAT(0.0) } // air bubbles
+
+
+
+
+
+// resolution phantom on the left side
+// -----------------------------------
+
+#define d0_xy 0.0400
+#define d0_z  0.4000
+
+#define d1_xy 0.0357
+#define d2_xy 0.0312
+#define d3_xy 0.0278
+#define d4_xy 0.0250
+
+#define d1_z  0.4000
+#define d2_z  0.2000
+#define d3_z  0.1000
+#define d4_z  0.0500
+
+#define x0 -7.0
+#define y0 -1.0
+#define z0  0.0
+
+//-----------------------------------------------------------------------------
+// Element 11
+
+{ [Ellipsoid: x=x0 y=y0         z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+2*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+4*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+6*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+8*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0 y=y0 z=z0+2*d1_z dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0 z=z0+4*d1_z dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0 z=z0+6*d1_z dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0 z=z0+8*d1_z dx=d1_xy/2 dy=d1_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 12
+
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy         z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy+2*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy+4*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy+6*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy+8*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy z=z0+2*d2_z dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy z=z0+4*d2_z dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy z=z0+6*d2_z dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+12*d0_xy z=z0+8*d2_z dx=d1_xy/2 dy=d1_xy/2 dz=d2_z/2] DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 13
+
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy         z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy+2*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy+4*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy+6*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy+8*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy z=z0+2*d3_z dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy z=z0+4*d3_z dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy z=z0+6*d3_z dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+24*d0_xy z=z0+8*d3_z dx=d1_xy/2 dy=d1_xy/2 dz=d3_z/2] DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 14
+
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy         z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy+2*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy+4*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy+6*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy+8*d1_xy z=z0 dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy z=z0+2*d4_z dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy z=z0+4*d4_z dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy z=z0+6*d4_z dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0 y=y0+36*d0_xy z=z0+8*d4_z dx=d1_xy/2 dy=d1_xy/2 dz=d4_z/2] DTMAT(1.8) }
+
+//=============================================================================
+// Element 21
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0         z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+2*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+4*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+6*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+8*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0 z=z0+2*d1_z dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0 z=z0+4*d1_z dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0 z=z0+6*d1_z dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0 z=z0+8*d1_z dx=d2_xy/2 dy=d2_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 22
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy         z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy+2*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy+4*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy+6*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy+8*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy z=z0+2*d2_z dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy z=z0+4*d2_z dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy z=z0+6*d2_z dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+12*d0_xy z=z0+8*d2_z dx=d2_xy/2 dy=d2_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 23
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy         z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy+2*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy+4*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy+6*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy+8*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy z=z0+2*d3_z dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy z=z0+4*d3_z dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy z=z0+6*d3_z dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+24*d0_xy z=z0+8*d3_z dx=d2_xy/2 dy=d2_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 24
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy         z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy+2*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy+4*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy+6*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy+8*d2_xy z=z0 dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy z=z0+2*d4_z dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy z=z0+4*d4_z dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy z=z0+6*d4_z dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+2*d0_xy y=y0+36*d0_xy z=z0+8*d4_z dx=d2_xy/2 dy=d2_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+
+//=============================================================================
+// Element 31
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0         z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+2*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+4*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+6*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+8*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0 z=z0+2*d1_z dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0 z=z0+4*d1_z dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0 z=z0+6*d1_z dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0 z=z0+8*d1_z dx=d3_xy/2 dy=d3_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 32
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy         z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy+2*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy+4*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy+6*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy+8*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy z=z0+2*d2_z dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy z=z0+4*d2_z dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy z=z0+6*d2_z dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+12*d0_xy z=z0+8*d2_z dx=d3_xy/2 dy=d3_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 33
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy         z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy+2*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy+4*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy+6*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy+8*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy z=z0+2*d3_z dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy z=z0+4*d3_z dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy z=z0+6*d3_z dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+24*d0_xy z=z0+8*d3_z dx=d3_xy/2 dy=d3_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 34
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy         z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy+2*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy+4*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy+6*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy+8*d3_xy z=z0 dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy z=z0+2*d4_z dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy z=z0+4*d4_z dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy z=z0+6*d4_z dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+4*d0_xy y=y0+36*d0_xy z=z0+8*d4_z dx=d3_xy/2 dy=d3_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+
+//=============================================================================
+// Element 41
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0         z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+2*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+4*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+6*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+8*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0 z=z0+2*d1_z dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0 z=z0+4*d1_z dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0 z=z0+6*d1_z dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0 z=z0+8*d1_z dx=d4_xy/2 dy=d4_xy/2 dz=d1_z/2] DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 42
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy         z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy+2*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy+4*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy+6*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy+8*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy z=z0+2*d2_z dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy z=z0+4*d2_z dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy z=z0+6*d2_z dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+12*d0_xy z=z0+8*d2_z dx=d4_xy/2 dy=d4_xy/2 dz=d2_z/2]
+   DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 43
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy         z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy+2*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy+4*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy+6*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy+8*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy z=z0+2*d3_z dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy z=z0+4*d3_z dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy z=z0+6*d3_z dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+24*d0_xy z=z0+8*d3_z dx=d4_xy/2 dy=d4_xy/2 dz=d3_z/2]
+   DTMAT(1.8) }
+
+//-----------------------------------------------------------------------------
+// Element 44
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy         z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy+2*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy+4*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy+6*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy+8*d4_xy z=z0 dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy z=z0+2*d4_z dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy z=z0+4*d4_z dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy z=z0+6*d4_z dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+{ [Ellipsoid: x=x0+6*d0_xy y=y0+36*d0_xy z=z0+8*d4_z dx=d4_xy/2 dy=d4_xy/2 dz=d4_z/2]
+   DTMAT(1.8) }
+
+
