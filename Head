@@ -22,6 +22,9 @@ Phantom
 
 { "5" [Ellipsoid: dx=9.6 dy=12 dz=12.5 ] formula=H2O rho=1.800 }
 { "6" [Ellipsoid: dx=9.0 dy=11.4 dz=11.9 ] formula=H2O rho=1.050 }
+{ [Ellipsoid: x=9.1 y=0.0 z=0.0 dx=4.2 dy=1.8 dz=1.8 x<9.11] formula=H2O rho=1.050 union=-1 }
+{ [Cone_y: y=-11.15 z=-0.2 r1=0.5 r2=0.2 l=1.5 ] formula=H2O rho=0.3 union=-2}
+{ [Cone_y: y=-11.15 z= 0.2 r1=0.5 r2=0.2 l=1.5] formula=H2O rho=0.3 union=-1}
 { "12"[Ellipsoid: y=-3.6 dx=1.8 dy= 3.6 dz= 3.6 ] formula=H2O rho=1.045 }
 { "7" [Ellipsoid: y= 8.4 dx=1.8 dy= 3.0 dz= 3.0 ] formula=H2O rho=0}
 
@@ -39,23 +42,23 @@ Phantom
 { "8" [Ellipsoid_free: x=-1.9 y=5.4 dx=+1.165373
       dy=+0.405956 dz=3.0
       a_z(+0.258819,0,+0.965926)
-      a_x(-0.482963,+0.866025,+0.129410)] formula=H2O rho=1.800 }
+      a_x(-0.482963,+0.866025,+0.129410)] formula=H2O rho=1.800 union=-2}
 
 { "9" [Ellipsoid_free: x=1.9 y=5.4 dx=+1.159111 dy=+0.405689 dz=3.0
       a_z(-0.258819,0,+0.965926)
-      a_x(+0.482963,+0.866025,+0.129410)] formula=H2O rho=1.800 }
+      a_x(+0.482963,+0.866025,+0.129410)] formula=H2O rho=1.800 union=-3}
 
 { "10"[Ellipt_Cyl: x=-4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0
-      axis(0,0,1) a_x(-0.866025,+0.500000,0) ] formula=H2O rho=1.800 }
+      axis(0,0,1) a_x(-0.866025,+0.500000,0) ] formula=H2O rho=1.800 union=-2}
 
 { "11"[Ellipt_Cyl: x=4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0
-      axis(0,0,1) a_x(+0.866025,+0.500000,0) ] formula=H2O rho=1.800 }
+      axis(0,0,1) a_x(+0.866025,+0.500000,0) ] formula=H2O rho=1.800 union=-2}
 
 { "13"[Ellipsoid_free: x=6.393945 y=-6.393945 dx=1.2 dy=0.42 dz=1.2
        a_x(+0.528438,+0.848972,0) a_z(0,0,1)] formula=H2O rho=1.055 }
 
 { "16"[Cone_y: y=-11.15 z=-0.2 r1=0.5 r2=0.2 l=1.5 ] formula=H2O rho=1.800 }
-{ "17"[Cone_y: y=-11.15 z= 0.2 r1=0.5 r2=0.2 l=1.5] formula=H2O rho=1.800 }
+{ "17"[Cone_y: y=-11.15 z= 0.2 r1=0.5 r2=0.2 l=1.5] formula=H2O rho=1.800 union=-1}
 
 
 
