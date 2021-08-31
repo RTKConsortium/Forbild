@@ -5,7 +5,7 @@
 
 
 #include "TableOfTissues"
-#define DTMAT(dens) formel=H2O dichte=dens
+#define DTMAT(dens) formula=H2O rho=dens
 
 
 Phantom
@@ -24,10 +24,10 @@ Phantom
 { "4" [Sphere: x= 1.08 y=-9             r=0.4] DTMAT(1.0475) }
 
 { "14"[Ellipt_Cyl: y=3.6 dx=1.2 dy=4.0 l=0.5*cos(15)
-              achse(0,-cos(30),sin(30)) a_y(0,sin(30),cos(30))] DTMAT(1.800) }
+              axis(0,-cos(30),sin(30)) a_y(0,sin(30),cos(30))] DTMAT(1.800) }
 
 { "15"[Ellipt_Cyl: y=9.6 dx=0.525561 dy=2. l=0.4
-              achse(1,0,0)             a_y(0,-sin(30),cos(30))] DTMAT(1.800) }
+              axis(1,0,0)             a_y(0,-sin(30),cos(30))] DTMAT(1.800) }
 
 { "8" [Ellipsoid_free: x=-1.9 y=5.4 dx=1.206483*cos(15) 
       dy=0.420276*cos(15) dz=3.0 
@@ -39,10 +39,10 @@ Phantom
       a_x(cos(15)*cos(60),sin(60),sin(15)*cos(60))] DTMAT(1.800) }
 
 { "10"[Ellipt_Cyl: x=-4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0  	 
-      achse(0,0,1) a_x(cos(150),sin(150),0) ] DTMAT(1.800) }
+      axis(0,0,1) a_x(cos(150),sin(150),0) ] DTMAT(1.800) }
 
 { "11"[Ellipt_Cyl: x=4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0 
-      achse(0,0,1) a_x(cos(30),sin(30),0) ] DTMAT(1.800) }
+      axis(0,0,1) a_x(cos(30),sin(30),0) ] DTMAT(1.800) }
 
 { "13"[Ellipsoid_free: x=6.393945 y=-6.393945 dx=1.2 dy=0.42 dz=1.2 
        a_x(cos(58.1),sin(58.1),0) a_z(0,0,1)] DTMAT(1.055) }

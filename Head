@@ -1,0 +1,754 @@
+# 1 "HeadPhantom.pha"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "HeadPhantom.pha"
+
+
+
+
+
+
+# 1 "TableOfTissues" 1
+# 8 "HeadPhantom.pha" 2
+
+
+
+Phantom
+
+
+
+
+{ "5" [Ellipsoid: dx=9.6 dy=12 dz=12.5 ] formula=H2O rho=1.800 }
+{ "6" [Ellipsoid: dx=9.0 dy=11.4 dz=11.9 ] formula=H2O rho=1.050 }
+{ "12"[Ellipsoid: y=-3.6 dx=1.8 dy= 3.6 dz= 3.6 ] formula=H2O rho=1.045 }
+{ "7" [Ellipsoid: y= 8.4 dx=1.8 dy= 3.0 dz= 3.0 ] formula=H2O rho=0}
+
+{ "1" [Sphere: x=-4.7 y= 4.3 z= 0.872 r=2.0] formula=H2O rho=1.060 }
+{ "2" [Sphere: x= 4.7 y= 4.3 z= 0.872 r=2.0] formula=H2O rho=1.060 }
+{ "3" [Sphere: x=-1.08 y=-9 r=0.4] formula=H2O rho=1.0525 }
+{ "4" [Sphere: x= 1.08 y=-9 r=0.4] formula=H2O rho=1.0475 }
+
+{ "14"[Ellipt_Cyl: y=3.6 dx=1.2 dy=4.0 l=+0.482963
+              axis(0,-0.866025,+0.500000) a_y(0,+0.500000,+0.866025)] formula=H2O rho=1.800 }
+
+{ "15"[Ellipt_Cyl: y=9.6 dx=0.525561 dy=2. l=0.4
+              axis(1,0,0) a_y(0,-0.500000,+0.866025)] formula=H2O rho=1.800 }
+
+{ "8" [Ellipsoid_free: x=-1.9 y=5.4 dx=+1.165373
+      dy=+0.405956 dz=3.0
+      a_z(+0.258819,0,+0.965926)
+      a_x(-0.482963,+0.866025,+0.129410)] formula=H2O rho=1.800 }
+
+{ "9" [Ellipsoid_free: x=1.9 y=5.4 dx=+1.159111 dy=+0.405689 dz=3.0
+      a_z(-0.258819,0,+0.965926)
+      a_x(+0.482963,+0.866025,+0.129410)] formula=H2O rho=1.800 }
+
+{ "10"[Ellipt_Cyl: x=-4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0
+      axis(0,0,1) a_x(-0.866025,+0.500000,0) ] formula=H2O rho=1.800 }
+
+{ "11"[Ellipt_Cyl: x=4.3 y=6.8 z=-1. dx=1.8 dy=0.24 l=4.0
+      axis(0,0,1) a_x(+0.866025,+0.500000,0) ] formula=H2O rho=1.800 }
+
+{ "13"[Ellipsoid_free: x=6.393945 y=-6.393945 dx=1.2 dy=0.42 dz=1.2
+       a_x(+0.528438,+0.848972,0) a_z(0,0,1)] formula=H2O rho=1.055 }
+
+{ "16"[Cone_y: y=-11.15 z=-0.2 r1=0.5 r2=0.2 l=1.5 ] formula=H2O rho=1.800 }
+{ "17"[Cone_y: y=-11.15 z= 0.2 r1=0.5 r2=0.2 l=1.5] formula=H2O rho=1.800 }
+
+
+
+
+
+{ [Ellipsoid: x=9.1 y=0.0 z=0.0 dx=4.2 dy=1.8 dz=1.8 x<9.1] formula=H2O rho=1.800 }
+
+
+
+
+
+{ [Sphere: z=0 x=8.8 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.4 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.0 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.6 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.2 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.8 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.4 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.0 y=0.0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=5.6 y=0.0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=0 x=8.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=5.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=0 x=8.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=0 x=8.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.2 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=0 x=8.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=5.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=0 x=8.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=0 x=8.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=8.2 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=7.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=0 x=6.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+
+
+
+
+{ [Sphere: z=+0.346410 x=8.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.0 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=5.8 y=0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.346410 x=8.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.346410 x=8.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.346410 x=8.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.2 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.346410 x=8.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.346410 x=8.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.346410 x=8.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=8.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=7.2 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.346410 x=6.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+
+
+
+
+{ [Sphere: z=-0.346410 x=8.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.0 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=5.8 y=0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.346410 x=8.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.346410 x=8.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.346410 x=8.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.2 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.346410 x=8.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.346410 x=8.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.346410 x=8.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=8.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=7.2 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.346410 x=6.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+
+
+
+
+{ [Sphere: z=+0.692820 x=8.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.0 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.0 y=0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.692820 x=8.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.692820 x=8.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.692820 x=8.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.2 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.692820 x=8.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.692820 x=8.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=6.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+0.692820 x=8.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=8.2 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+0.692820 x=7.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+
+
+
+
+{ [Sphere: z=-0.692820 x=8.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.0 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.0 y=0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.692820 x=8.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.692820 x=8.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.692820 x=8.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.2 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.692820 x=8.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.692820 x=8.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=6.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-0.692820 x=8.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=8.2 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-0.692820 x=7.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+
+
+
+
+{ [Sphere: z=+1.039231 x=8.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.0 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=6.6 y=0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+1.039231 x=8.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=6.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+1.039231 x=8.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+1.039231 x=8.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+1.039231 x=8.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=6.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+1.039231 x=8.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=+1.039231 x=8.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=8.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=+1.039231 x=7.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+
+
+
+
+{ [Sphere: z=-1.039231 x=8.6 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.2 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.8 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.4 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.0 y=0 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=6.6 y=0 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-1.039231 x=8.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.4 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.0 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.6 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.2 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=6.8 y=+0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-1.039231 x=8.6 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.2 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.8 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.4 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.0 y=+0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-1.039231 x=8.8 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.4 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.0 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.6 y=+1.039231 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-1.039231 x=8.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.4 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.0 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.6 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.2 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=6.8 y=-0.346410 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-1.039231 x=8.6 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.2 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.8 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.4 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.0 y=-0.692820 r=.15] formula=H2O rho=0.0 }
+
+{ [Sphere: z=-1.039231 x=8.8 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.4 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=8.0 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+{ [Sphere: z=-1.039231 x=7.6 y=-1.039231 r=.15] formula=H2O rho=0.0 }
+# 474 "HeadPhantom.pha"
+{ [Ellipsoid: x=-7.0 y=-1.0 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.035700 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.107100 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.178500 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.249900 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-7.0 y=-1.0 z=+0.800000 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=-1.0 z=+1.600000 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=-1.0 z=+2.400000 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=-1.0 z=+3.200000 dx=+0.017850 dy=+0.017850 dz=+0.200000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-7.0 y=+0.440000 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.801108 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+1.586508 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+2.371908 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+3.157308 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-7.0 y=+0.440000 z=+0.400000 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.440000 z=+0.800000 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.440000 z=+1.200000 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.440000 z=+1.600000 dx=+0.017850 dy=+0.017850 dz=+0.100000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-7.0 y=+0.920000 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+1.675044 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+3.317244 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+4.959444 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+6.601644 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-7.0 y=+0.920000 z=+0.200000 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.920000 z=+0.400000 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.920000 z=+0.600000 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+0.920000 z=+0.800000 dx=+0.017850 dy=+0.017850 dz=+0.050000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-7.0 y=+1.400000 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+2.548980 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+5.047980 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+7.546980 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+10.045980 z=0.0 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-7.0 y=+1.400000 z=+0.100000 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+1.400000 z=+0.200000 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+1.400000 z=+0.300000 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-7.0 y=+1.400000 z=+0.400000 dx=+0.017850 dy=+0.017850 dz=+0.025000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.200000 y=-1.0 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.031200 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.093600 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.156000 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.218400 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.200000 y=-1.0 z=+0.800000 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=-1.0 z=+1.600000 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=-1.0 z=+2.400000 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=-1.0 z=+3.200000 dx=+0.015600 dy=+0.015600 dz=+0.200000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.200000 y=+0.440000 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.700128 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+1.386528 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+2.072928 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+2.759328 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.200000 y=+0.440000 z=+0.400000 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.440000 z=+0.800000 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.440000 z=+1.200000 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.440000 z=+1.600000 dx=+0.015600 dy=+0.015600 dz=+0.100000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.200000 y=+0.920000 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+1.463904 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+2.899104 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+4.334304 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+5.769504 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.200000 y=+0.920000 z=+0.200000 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.920000 z=+0.400000 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.920000 z=+0.600000 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+0.920000 z=+0.800000 dx=+0.015600 dy=+0.015600 dz=+0.050000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.200000 y=+1.400000 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+2.227680 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+4.411680 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+6.595680 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+8.779680 z=0.0 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.200000 y=+1.400000 z=+0.100000 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+1.400000 z=+0.200000 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+1.400000 z=+0.300000 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.200000 y=+1.400000 z=+0.400000 dx=+0.015600 dy=+0.015600 dz=+0.025000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.120000 y=-1.0 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.027800 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.083400 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.139000 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.194600 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.120000 y=-1.0 z=+0.800000 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=-1.0 z=+1.600000 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=-1.0 z=+2.400000 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=-1.0 z=+3.200000 dx=+0.013900 dy=+0.013900 dz=+0.200000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.120000 y=+0.440000 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.623832 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.235432 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.847032 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+2.458632 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.120000 y=+0.440000 z=+0.400000 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.440000 z=+0.800000 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.440000 z=+1.200000 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.440000 z=+1.600000 dx=+0.013900 dy=+0.013900 dz=+0.100000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.120000 y=+0.920000 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.304376 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+2.583176 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+3.861976 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+5.140776 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.120000 y=+0.920000 z=+0.200000 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.920000 z=+0.400000 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.920000 z=+0.600000 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+0.920000 z=+0.800000 dx=+0.013900 dy=+0.013900 dz=+0.050000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.120000 y=+1.400000 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.984920 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+3.930920 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+5.876920 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+7.822920 z=0.0 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.120000 y=+1.400000 z=+0.100000 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.400000 z=+0.200000 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.400000 z=+0.300000 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.120000 y=+1.400000 z=+0.400000 dx=+0.013900 dy=+0.013900 dz=+0.025000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.040000 y=-1.0 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.025000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.075000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.125000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.175000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.040000 y=-1.0 z=+0.800000 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=-1.0 z=+1.600000 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=-1.0 z=+2.400000 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=-1.0 z=+3.200000 dx=+0.012500 dy=+0.012500 dz=+0.200000] formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.040000 y=+0.440000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.561000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.111000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.661000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+2.211000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.040000 y=+0.440000 z=+0.400000 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.440000 z=+0.800000 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.440000 z=+1.200000 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.440000 z=+1.600000 dx=+0.012500 dy=+0.012500 dz=+0.100000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.040000 y=+0.920000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.173000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+2.323000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+3.473000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+4.623000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.040000 y=+0.920000 z=+0.200000 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.920000 z=+0.400000 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.920000 z=+0.600000 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+0.920000 z=+0.800000 dx=+0.012500 dy=+0.012500 dz=+0.050000]
+   formula=H2O rho=1.8 }
+
+
+
+
+{ [Ellipsoid: x=-0.040000 y=+1.400000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.785000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+3.535000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+5.285000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+7.035000 z=0.0 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+
+{ [Ellipsoid: x=-0.040000 y=+1.400000 z=+0.100000 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.400000 z=+0.200000 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.400000 z=+0.300000 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
+{ [Ellipsoid: x=-0.040000 y=+1.400000 z=+0.400000 dx=+0.012500 dy=+0.012500 dz=+0.025000]
+   formula=H2O rho=1.8 }
