@@ -1,0 +1,53 @@
+#include "Vertebra.pha"
+#include "TableOfTissues"
+
+Text "Thorax"
+
+// 4x Cylinder_z, 1x Cylinder, 1x ElliptCyl_z,  3x Ellipsoid, 2x Box  -> 11 Objects
+
+
+Phantom 
+
+
+//Arm
+{ [ Cylinder_z: x=-20  y=0  z=17.5  l=15  r=5 ] formula=H2O  rho=WATER }
+{ [ Cylinder_z: x=20   y=0  z=17.5  l=15  r=5 ] formula=H2O  rho=WATER }
+
+//Thorax
+{ [ Ellipt_Cyl_z: l=50 dx=20 dy=10 ] formula=H2O  rho=WATER }
+
+//Lungs
+{ [ Ellipsoid: x=-10.5  y=0  z=0  dx=7.5  dy=5.5  dz=15 ] formula=H2O  rho=LUNG }
+{ [ Ellipsoid: x=10.5   y=0  z=0  dx=7.5  dy=5.5  dz=15 ] formula=H2O  rho=LUNG }
+
+//Sternum 
+{ [ Box: x=0  y=9  z=2.5  dx=2.5  dy=0.8  dz=25 ] formula=H2O  rho=STERNUM }
+{ [ Box: x=0  y=9  z=2.5  dx=2    dy=0.5  dz=25 ] formula=H2O  rho=BONEMARROW }
+
+//Heart
+{ [ Ellipsoid: x=0 y=4 z=0  dx=3.5 dy=3.5 dz=3.5 ] formula=H2O rho=HEART }
+
+//Aorta
+{ [ Cylinder_z: x=-2.5   y=-2.5  z=0  l=30   r=1   r(3,7,sqrt(58))<2.982109   ] formula=H2O  rho=AORTA }
+{ [ Cylinder_z: x=0.5    y=4.5   z=6  l=6    r=1   r(1,2,-sqrt(5))>-2.2393277 ] formula=H2O  rho=AORTA }
+{ [ Cylinder:   axis(3,7,0)  x=-1   y=1  z=7.5  l=22   r=1 r(3,7,sqrt(58))>2.982109   r(1,2,-sqrt(5))<-2.2393277 ] formula=H2O  rho=AORTA }
+
+
+//Spin: all together 64 Objects
+Wirbelkoerper(0,-5,15,2)
+Wirbelkoerper(0,-5,12,2)
+Wirbelkoerper(0,-5,9,2)
+Wirbelkoerper(0,-5,6,2)
+Wirbelkoerper(0,-5,3,2)
+Wirbelkoerper(0,-5,0,2)
+Wirbelkoerper(0,-5,-3,2)
+Wirbelkoerper(0,-5,-6,2)
+
+//Ribs: all together 180 objects 
+#include "Ribs.pha"
+
+//Shoulders: all together 16 objects
+#include "Shoulders.pha"
+
+// All together: 271 Objects included
+

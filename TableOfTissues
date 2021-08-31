@@ -1,0 +1,34 @@
+// The following list just contains typical values of tissue densities
+// And a rough guess of the HU value for monochramtic radiation with 70keV
+// For detailed information refer to ICRP Publication 23 and ICRU Report 44 
+// We could decide that a contrast below 20 HU (= 2% difference) is "low" by definition
+
+// Material           rho [g/cm^3]       HU 
+
+#define WATER         1.000           //  0                
+#define LIVER         1.050           //  65  +/- 5
+#define KIDNEY        1.050           //  30  +/- 10                
+#define AORTA         1.050           //  55  +/- 5
+#define PANCREAS      1.040           //  40  +/- 10
+#define BRAIN         1.040           //  50  +/- 5 
+#define HEART         1.050           //  50  +/- 5 
+#define MUSCLE        1.050           //  45  +/- 5
+#define FAT           0.930           // -65  +/- 10
+#define BONEMARROW    0.980           // -30  +/- 5
+#define LUNG          0.260           // -770 +/- 20
+#define URINE         1.020           //  20  +/- 5
+
+#define SPONGIOSA     1.180           //  130 +/- 100
+#define STERNUM       1.250           // ca. 400
+#define RIPS_2ND      1.410           // ca. 665
+#define RIPS_10TH     1.510           // ca. 840
+#define FEMUR         1.430           // ca. 720
+#define HUMERUS       1.460           // ca. 765
+#define CLAVICULUM    1.460           // ca. 765
+#define SKAPULUM      1.460           // ca. 765
+#define CRANIUM       1.610           // ca. 1020
+#define MANDIBULA     1.680           // ca. 1130
+#define KORTIKALIS    1.920           // ca. 1500
+
+#define TEETH         2.5             // 2000-3000 
+#define METAL         10.0            // depends on type of metal              
