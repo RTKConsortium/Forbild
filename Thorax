@@ -37,7 +37,7 @@ Phantom
 
 
 { [ Cylinder_z: x=-2.5 y=-2.5 z=0 l=30 r=1 r(3,7,+7.615773)<2.982109 ] formula=H2O rho=1.050 }
-{ [ Cylinder_z: x=0.5 y=4.5 z=6 l=6 r=1 r(1,2,-2.236068)>-2.2393277 ] formula=H2O rho=1.050 }
+{ [ Cylinder_z: x=0.5 y=4.5 z=6 l=6 r=1 r(1,2,-2.236068)>-2.2393277 ] formula=H2O rho=1.050 union=-2 }
 { [ Cylinder: axis(3,7,0) x=-1 y=1 z=7.5 l=22 r=1 r(3,7,+7.615773)>2.982109 r(1,2,-2.236068)<-2.2393277 ] formula=H2O rho=1.050 }
 
 
@@ -302,8 +302,8 @@ Phantom
 { [ Sphere: x=-22 y=0 z=15 r=2 ] formula=H2O rho=0.980 }
 { [ Sphere: x=22 y=0 z=15 r=2 ] formula=H2O rho=0.980 }
 
-{ [ Sphere: x=-16.5 y=0 z=15 r=2.5 ] formula=H2O rho=1.460 }
-{ [ Sphere: x=16.5 y=0 z=15 r=2.5 ] formula=H2O rho=1.460 }
+{ [ Sphere: x=-16.5 y=0 z=15 r=2.5 ] formula=H2O rho=1.460 union=-12}
+{ [ Sphere: x=16.5 y=0 z=15 r=2.5 ] formula=H2O rho=1.460 union=-12}
 { [ Sphere: x=-16.5 y=0 z=15 r=2 ] formula=H2O rho=0.980 }
 { [ Sphere: x=16.5 y=0 z=15 r=2 ] formula=H2O rho=0.980 }
 # 51 "ThoraxPhantom.pha" 2
