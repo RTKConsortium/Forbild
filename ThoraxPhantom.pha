@@ -14,7 +14,7 @@ Phantom
 { [ Cylinder_z: x=20   y=0  z=17.5  l=15  r=5 ] formula=H2O  rho=WATER }
 
 //Thorax
-{ [ Ellipt_Cyl_z: l=50 dx=20 dy=10 ] formula=H2O  rho=WATER }
+{ [ Ellipt_Cyl_z: l=50 dx=20 dy=10 ] formula=H2O  rho=WATER union=-1 union=-2}
 
 //Lungs
 { [ Ellipsoid: x=-10.5  y=0  z=0  dx=7.5  dy=5.5  dz=15 ] formula=H2O  rho=LUNG }
