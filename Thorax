@@ -293,8 +293,8 @@ Phantom
 
 { [ Ellipsoid_free: a_x(2,-1,0) a_y(1,2,0) x=-12 y=-5 z=15 dx=4.5 dy=0.5 dz=6 z<15 ] formula=H2O rho=1.460 }
 { [ Ellipsoid_free: a_x(2,1,0) a_y(-1,2,0) x=12 y=-5 z=15 dx=4.5 dy=0.5 dz=6 z<15 ] formula=H2O rho=1.460 }
-{ [ Ellipsoid_free: a_x(2,-1,0) a_y(1,2,0) x=-12 y=-5 z=15 dx=4 dy=0.4 dz=5.5 z<15 ] formula=H2O rho=0.980 }
-{ [ Ellipsoid_free: a_x(2,1,0) a_y(-1,2,0) x=12 y=-5 z=15 dx=4 dy=0.4 dz=5.5 z<15 ] formula=H2O rho=0.980 }
+{ [ Ellipsoid_free: a_x(2,-1,0) a_y(1,2,0) x=-12 y=-5 z=15 dx=4 dy=0.4 dz=5.5 z<15 ] formula=H2O rho=0.52 }
+{ [ Ellipsoid_free: a_x(2,1,0) a_y(-1,2,0) x=12 y=-5 z=15 dx=4 dy=0.4 dz=5.5 z<15 ] formula=H2O rho=0.52 }
 
 
 { [ Sphere: x=-22 y=0 z=15 r=2.5 ] formula=H2O rho=1.460 }
