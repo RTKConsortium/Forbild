@@ -6,12 +6,12 @@
 
 #define Wirbelkoerper(X,Y,Z, height)\
 Phantom\
-{ [ Cylinder_z:  x=X     y=Y        z=Z   l=height            r=1.75                 ] formula=H2O  rho=KORTIKALIS } \
-{ [ Box:         x=X     y=Y-1.4    z=Z   dx=2*sqrt(1.3725)   dy=0.2      dz=height  ] formula=H2O  rho=KORTIKALIS } \
+{ [ Cylinder_z:  x=X     y=Y        z=Z   l=height            r=1.75      r(0,1,0)>Y-1.35           ] formula=H2O  rho=KORTIKALIS } \
+{ [ Box:         x=X     y=Y-1.4    z=Z   dx=2*sqrt(1.3725)   dy=0.2      dz=height union=-1 ] formula=H2O  rho=KORTIKALIS } \
 { [ Cylinder_z:  x=X     y=Y        z=Z   l=height            r=1.5                  ] formula=H2O  rho=SPONGIOSA  } \
 { [ Box:         x=X-2   y=Y-1.975  z=Z   dx=4                dy=0.95     dz=height                       \
                  r(-0.95,4-sqrt(1.3725),0) < ((-0.95*(-4+X)+(-2.45+Y)*(4-sqrt(1.3725)))/sqrt(0.95*0.95+(4-sqrt(1.3725))*(4-sqrt(1.3725)))) \
-                 r(-2,32,0)>((-2*(-4+X)+32*(Y-2.45))/sqrt(1028))    union=-3                  ] formula=H2O  rho=KORTIKALIS } \
+                 r(-2,32,0)>((-2*(-4+X)+32*(Y-2.45))/sqrt(1028))    union=-2                  ] formula=H2O  rho=KORTIKALIS } \
 { [ Box:         x=X+2   y=Y-1.975  z=Z   dx=4                dy=0.95     dz=height                       \
                  r(0.95,4-sqrt(1.3725),0) < ((0.95*(4+X)+(-2.45+Y)*(4-sqrt(1.3725)))/sqrt(0.95*0.95+(4-sqrt(1.3725))*(4-sqrt(1.3725))))    \
                  r(2,32,0)>((2*(4+X)+32*(Y-2.45))/sqrt(1028))         union=-1               ] formula=H2O  rho=KORTIKALIS } \
