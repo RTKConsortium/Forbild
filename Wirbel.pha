@@ -1,0 +1,28 @@
+//definition of a vertebra of center (X,Y,Z),  with height "hoehe"
+//defintion according to the Cardio-Phantom 
+
+
+#define Wirbelkoerper(X,Y,Z, hoehe)\
+	Phantom\
+		{	[Cylinder_z:	x=X 	y=Y		 z=Z		l=hoehe 		r=1.75						] 	rho=KORTIKALIS 	}\
+		{	[Box:		x=X	y=Y-1.4		 z=Z		dx=2*sqrt(1.3725)	dy=0.2		dz=hoehe			]	rho=KORTIKALIS 	}\
+		{	[Cylinder_z:	x=X 	y=Y		 z=Z		l=hoehe 		r=1.5						] 	rho=SPONGIOSA 	}\
+\
+		{	[Box:		x=X-2	y=Y-1.975	 z=Z		dx=4			dy=0.95		dz=hoehe						\
+						r(-0.95, 4-sqrt(1.3725),0) < ( ( -0.95*(-4+X) + (-2.45+Y)*(4-sqrt(1.3725) ) )  / sqrt(0.95*0.95 + (4-sqrt(1.3725))*(4-sqrt(1.3725)) ) ) 	\
+						r(-2,32,0)>( (- 2*(-4+X) + 32*(Y-2.45) )/sqrt(1028) )								]	rho=KORTIKALIS	}\
+\
+		{	[Box:		x=X+2	y=Y-1.975	 z=Z		dx=4			dy=0.95		dz=hoehe						\
+						r(0.95, 4-sqrt(1.3725),0) < ( ( 0.95*(4+X) + (-2.45+Y)*(4-sqrt(1.3725) ) )  / sqrt(0.95*0.95 + (4-sqrt(1.3725))*(4-sqrt(1.3725)) ) ) 		\
+						r(2,32,0)>( ( 2*(4+X) + 32*(Y-2.45) )/sqrt(1028) )								]	rho=KORTIKALIS	}\
+\
+		{	[Box:		x=X	y=-2.35+Y	z=Z		dx=1.6			dy=0.3		dz=hoehe						\
+						r(-2,4,0) > ( ( -2*(0.4+X)+4*(-2.45+Y) )/sqrt(20) )											\
+						r(-2,-4,0) < ( ( -2*(-0.4+X)-4*(-2.45+Y) )/sqrt(20) )								] 	rho=KORTIKALIS 	}\
+\
+		{ 	[Box:		x=X	y=-3.25+Y	z=Z		dx=0.8			dy=1.6		dz=hoehe			]	rho=KORTIKALIS	}\
+		{	[Cylinder_z:	x=X 	y=Y-4.05	z=Z		l=hoehe 		r=0.4		y<Y-4.05			] 	rho=KORTIKALIS	}
+
+
+
+
