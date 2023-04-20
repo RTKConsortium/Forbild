@@ -3,11 +3,11 @@
 /* mailto: stefan.schaller@med.siemens.de                               */
 
 #include "TableOfTissues"
-#include "Wirbel.pha"
+#include "Vertebra.pha"
 
-#define REL 
+#define REL
 
-#define CTMAT(x) formel=H2O dichte=x
+#define CTMAT(x) formel=H2O rho=x
 #define LEN   100
 
 Phantom
@@ -15,114 +15,114 @@ Phantom
 { "A1" [Ellipt_Cyl_z: dx=20 dy=12 l=100 ] 	CTMAT(WATER)  	REL	}
 
 /* ++++ Liver +++++++++++++++++++++++++++++++++++++++++++++++++++++++++	*/
-{ "B2" [Ellipsoid_free: x=-10 y=0 dx=8 dy=7 dz=10 
-                       a_x(cos(60), sin(60),0) a_z(0,0,1) ] 
+{ "B2" [Ellipsoid_free: x=-10 y=0 dx=8 dy=7 dz=10
+                       a_x(cos(60), sin(60),0) a_z(0,0,1) ]
 		       				CTMAT(1.06)  		REL	}
 
 /* ++++ Vertebrae +++++++++++++++++++++++++++++++++++++++++++++++++++++	*/
-Wirbelkoerper(0, -7,-10, KORTIKALIS, SPONGIOSA, 4)
-Wirbelkoerper(0, -7, -5, KORTIKALIS, SPONGIOSA, 4)
-Wirbelkoerper(0, -7,  0, KORTIKALIS, SPONGIOSA, 4)
-Wirbelkoerper(0, -7,  5, KORTIKALIS, SPONGIOSA, 4)
-Wirbelkoerper(0, -7, 10, KORTIKALIS, SPONGIOSA, 4)
+Wirbelkoerper(0, -7,-10, 4)
+Wirbelkoerper(0, -7, -5, 4)
+Wirbelkoerper(0, -7,  0, 4)
+Wirbelkoerper(0, -7,  5, 4)
+Wirbelkoerper(0, -7, 10, 4)
 
 /* ++++ Lesions at z=0 ++++++++++++++++++++++++++++++++++++++++++++++++	*/
-{ "C11" [Sphere: x=-14   y=1.2 r=0.6] CTMAT(1.05) 			REL	} 
-{ "C12" [Sphere: x=-11.6 y=1.2 r=0.6] CTMAT(1.05) 			REL	} 
-{ "C13" [Sphere: x= -9.2 y=1.2 r=0.6] CTMAT(1.05) 			REL	} 
-{ "C14" [Sphere: x=- 6.8 y=1.2 r=0.6] CTMAT(1.05) 			REL	} 
-{ "C15" [Sphere: x=- 4.4 y=1.2 r=0.6] CTMAT(1.05) 			REL	} 
+{ "C11" [Sphere: x=-14   y=1.2 r=0.6] CTMAT(1.05) 			REL	}
+{ "C12" [Sphere: x=-11.6 y=1.2 r=0.6] CTMAT(1.05) 			REL	}
+{ "C13" [Sphere: x= -9.2 y=1.2 r=0.6] CTMAT(1.05) 			REL	}
+{ "C14" [Sphere: x=-6.8 y=1.2 r=0.6] CTMAT(1.05) 			REL	}
+{ "C15" [Sphere: x=-4.4 y=1.2 r=0.6] CTMAT(1.05) 			REL	}
 
-{ "C21" [Sphere: x=-14 y=-0.6 r=0.5] CTMAT(1.05) 			REL	} 
-{ "C22" [Sphere: x=-12 y=-0.6 r=0.5] CTMAT(1.05) 			REL	} 
-{ "C23" [Sphere: x=-10 y=-0.6 r=0.5] CTMAT(1.05) 			REL	} 
-{ "C24" [Sphere: x=-8  y=-0.6 r=0.5] CTMAT(1.05) 			REL	} 
-{ "C25" [Sphere: x=-6  y=-0.6 r=0.5] CTMAT(1.05) 			REL	} 
+{ "C21" [Sphere: x=-14 y=-0.6 r=0.5] CTMAT(1.05) 			REL	}
+{ "C22" [Sphere: x=-12 y=-0.6 r=0.5] CTMAT(1.05) 			REL	}
+{ "C23" [Sphere: x=-10 y=-0.6 r=0.5] CTMAT(1.05) 			REL	}
+{ "C24" [Sphere: x=-8  y=-0.6 r=0.5] CTMAT(1.05) 			REL	}
+{ "C25" [Sphere: x=-6  y=-0.6 r=0.5] CTMAT(1.05) 			REL	}
 
-{ "C31" [Sphere: x=-14   y=-2.1 r=0.4] CTMAT(1.05) 			REL	} 
-{ "C32" [Sphere: x=-12.4 y=-2.1 r=0.4] CTMAT(1.05) 			REL	} 
-{ "C33" [Sphere: x=-10.8 y=-2.1 r=0.4] CTMAT(1.05) 			REL	} 
-{ "C34" [Sphere: x=- 9.2 y=-2.1 r=0.4] CTMAT(1.05) 			REL	} 
-{ "C35" [Sphere: x=- 7.6 y=-2.1 r=0.4] CTMAT(1.05) 			REL	} 
+{ "C31" [Sphere: x=-14   y=-2.1 r=0.4] CTMAT(1.05) 			REL	}
+{ "C32" [Sphere: x=-12.4 y=-2.1 r=0.4] CTMAT(1.05) 			REL	}
+{ "C33" [Sphere: x=-10.8 y=-2.1 r=0.4] CTMAT(1.05) 			REL	}
+{ "C34" [Sphere: x=-9.2 y=-2.1 r=0.4] CTMAT(1.05) 			REL	}
+{ "C35" [Sphere: x=-7.6 y=-2.1 r=0.4] CTMAT(1.05) 			REL	}
 
-{ "C41" [Sphere: x=-14   y=-3.3 r=0.3] CTMAT(1.05) 			REL	} 
-{ "C42" [Sphere: x=-12.8 y=-3.3 r=0.3] CTMAT(1.05) 			REL	} 
-{ "C43" [Sphere: x=-11.6 y=-3.3 r=0.3] CTMAT(1.05) 			REL	} 
-{ "C44" [Sphere: x=-10.4 y=-3.3 r=0.3] CTMAT(1.05) 			REL	} 
-{ "C45" [Sphere: x=-9.2  y=-3.3 r=0.3] CTMAT(1.05) 			REL	} 
+{ "C41" [Sphere: x=-14   y=-3.3 r=0.3] CTMAT(1.05) 			REL	}
+{ "C42" [Sphere: x=-12.8 y=-3.3 r=0.3] CTMAT(1.05) 			REL	}
+{ "C43" [Sphere: x=-11.6 y=-3.3 r=0.3] CTMAT(1.05) 			REL	}
+{ "C44" [Sphere: x=-10.4 y=-3.3 r=0.3] CTMAT(1.05) 			REL	}
+{ "C45" [Sphere: x=-9.2  y=-3.3 r=0.3] CTMAT(1.05) 			REL	}
 
-{ "C51" [Sphere: x=-14 y=-4.2 r=0.25] CTMAT(1.05) 			REL	} 
-{ "C52" [Sphere: x=-13 y=-4.2 r=0.25] CTMAT(1.05) 			REL	} 
-{ "C53" [Sphere: x=-12 y=-4.2 r=0.25] CTMAT(1.05) 			REL	} 
-{ "C54" [Sphere: x=-11 y=-4.2 r=0.25] CTMAT(1.05) 			REL	} 
-{ "C55" [Sphere: x=-10 y=-4.2 r=0.25] CTMAT(1.05) 			REL	} 
+{ "C51" [Sphere: x=-14 y=-4.2 r=0.25] CTMAT(1.05) 			REL	}
+{ "C52" [Sphere: x=-13 y=-4.2 r=0.25] CTMAT(1.05) 			REL	}
+{ "C53" [Sphere: x=-12 y=-4.2 r=0.25] CTMAT(1.05) 			REL	}
+{ "C54" [Sphere: x=-11 y=-4.2 r=0.25] CTMAT(1.05) 			REL	}
+{ "C55" [Sphere: x=-10 y=-4.2 r=0.25] CTMAT(1.05) 			REL	}
 
-{ "C61" [Sphere: x=-14   y=-4.95 r=0.2] CTMAT(1.05) 			REL	} 
-{ "C62" [Sphere: x=-13.2 y=-4.95 r=0.2] CTMAT(1.05) 			REL	} 
-{ "C63" [Sphere: x=-12.4 y=-4.95 r=0.2] CTMAT(1.05) 			REL	} 
-{ "C64" [Sphere: x=-11.6 y=-4.95 r=0.2] CTMAT(1.05) 			REL	} 
-{ "C65" [Sphere: x=-10.8 y=-4.95 r=0.2] CTMAT(1.05) 			REL	} 
+{ "C61" [Sphere: x=-14   y=-4.95 r=0.2] CTMAT(1.05) 			REL	}
+{ "C62" [Sphere: x=-13.2 y=-4.95 r=0.2] CTMAT(1.05) 			REL	}
+{ "C63" [Sphere: x=-12.4 y=-4.95 r=0.2] CTMAT(1.05) 			REL	}
+{ "C64" [Sphere: x=-11.6 y=-4.95 r=0.2] CTMAT(1.05) 			REL	}
+{ "C65" [Sphere: x=-10.8 y=-4.95 r=0.2] CTMAT(1.05) 			REL	}
 
-{ "C71" [Sphere: x=-14   y=-5.55 r=0.15] CTMAT(1.05) 			REL	} 
-{ "C72" [Sphere: x=-13.4 y=-5.55 r=0.15] CTMAT(1.05) 			REL	} 
-{ "C73" [Sphere: x=-12.8 y=-5.55 r=0.15] CTMAT(1.05) 			REL	} 
-{ "C74" [Sphere: x=-12.2 y=-5.55 r=0.15] CTMAT(1.05) 			REL	} 
-{ "C75" [Sphere: x=-11.6 y=-5.55 r=0.15] CTMAT(1.05) 			REL	} 
+{ "C71" [Sphere: x=-14   y=-5.55 r=0.15] CTMAT(1.05) 			REL	}
+{ "C72" [Sphere: x=-13.4 y=-5.55 r=0.15] CTMAT(1.05) 			REL	}
+{ "C73" [Sphere: x=-12.8 y=-5.55 r=0.15] CTMAT(1.05) 			REL	}
+{ "C74" [Sphere: x=-12.2 y=-5.55 r=0.15] CTMAT(1.05) 			REL	}
+{ "C75" [Sphere: x=-11.6 y=-5.55 r=0.15] CTMAT(1.05) 			REL	}
 
-{ "C81" [Sphere: x=-14   y=-6 r=0.1] CTMAT(1.05) 			REL	} 
-{ "C82" [Sphere: x=-13.6 y=-6 r=0.1] CTMAT(1.05) 			REL	} 
-{ "C83" [Sphere: x=-13.2 y=-6 r=0.1] CTMAT(1.05) 			REL	} 
-{ "C84" [Sphere: x=-12.8 y=-6 r=0.1] CTMAT(1.05) 			REL	} 
-{ "C85" [Sphere: x=-12.4 y=-6 r=0.1] CTMAT(1.05) 			REL	} 
+{ "C81" [Sphere: x=-14   y=-6 r=0.1] CTMAT(1.05) 			REL	}
+{ "C82" [Sphere: x=-13.6 y=-6 r=0.1] CTMAT(1.05) 			REL	}
+{ "C83" [Sphere: x=-13.2 y=-6 r=0.1] CTMAT(1.05) 			REL	}
+{ "C84" [Sphere: x=-12.8 y=-6 r=0.1] CTMAT(1.05) 			REL	}
+{ "C85" [Sphere: x=-12.4 y=-6 r=0.1] CTMAT(1.05) 			REL	}
 
 /* ++++ Lesions at z=3 ++++++++++++++++++++++++++++++++++++++++++++++++	*/
-{ "D11" [Sphere: x=-14   y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	} 
-{ "D12" [Sphere: x=-11.6 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	} 
-{ "D13" [Sphere: x= -9.2 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	} 
-{ "D14" [Sphere: x=- 6.8 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	} 
-{ "D15" [Sphere: x=- 4.4 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	} 
+{ "D11" [Sphere: x=-14   y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	}
+{ "D12" [Sphere: x=-11.6 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	}
+{ "D13" [Sphere: x= -9.2 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	}
+{ "D14" [Sphere: x=-6.8 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	}
+{ "D15" [Sphere: x=-4.4 y=1.2 z=3 r=0.6] CTMAT(1.05) 		REL	}
 
-{ "D21" [Sphere: x=-14 y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	} 
-{ "D22" [Sphere: x=-12 y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	} 
-{ "D23" [Sphere: x=-10 y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	} 
-{ "D24" [Sphere: x=-8  y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	} 
-{ "D25" [Sphere: x=-6  y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	} 
+{ "D21" [Sphere: x=-14 y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	}
+{ "D22" [Sphere: x=-12 y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	}
+{ "D23" [Sphere: x=-10 y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	}
+{ "D24" [Sphere: x=-8  y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	}
+{ "D25" [Sphere: x=-6  y=-0.6 z=3 r=0.5] CTMAT(1.05) 			REL	}
 
-{ "D31" [Sphere: x=-14   y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	} 
-{ "D32" [Sphere: x=-12.4 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	} 
-{ "D33" [Sphere: x=-10.8 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	} 
-{ "D34" [Sphere: x=- 9.2 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	} 
-{ "D35" [Sphere: x=- 7.6 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	} 
+{ "D31" [Sphere: x=-14   y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	}
+{ "D32" [Sphere: x=-12.4 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	}
+{ "D33" [Sphere: x=-10.8 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	}
+{ "D34" [Sphere: x=-9.2 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	}
+{ "D35" [Sphere: x=-7.6 y=-2.1 z=3 r=0.4] CTMAT(1.05) 		REL	}
 
-{ "D41" [Sphere: x=-14   y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	} 
-{ "D42" [Sphere: x=-12.8 y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	} 
-{ "D43" [Sphere: x=-11.6 y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	} 
-{ "D44" [Sphere: x=-10.4 y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	} 
-{ "D45" [Sphere: x=-9.2  y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	} 
+{ "D41" [Sphere: x=-14   y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	}
+{ "D42" [Sphere: x=-12.8 y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	}
+{ "D43" [Sphere: x=-11.6 y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	}
+{ "D44" [Sphere: x=-10.4 y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	}
+{ "D45" [Sphere: x=-9.2  y=-3.3 z=3 r=0.3] CTMAT(1.05) 		REL	}
 
-{ "D51" [Sphere: x=-14 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	} 
-{ "D52" [Sphere: x=-13 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	} 
-{ "D53" [Sphere: x=-12 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	} 
-{ "D54" [Sphere: x=-11 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	} 
-{ "D55" [Sphere: x=-10 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	} 
+{ "D51" [Sphere: x=-14 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	}
+{ "D52" [Sphere: x=-13 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	}
+{ "D53" [Sphere: x=-12 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	}
+{ "D54" [Sphere: x=-11 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	}
+{ "D55" [Sphere: x=-10 y=-4.2 z=3 r=0.25] CTMAT(1.05) 		REL	}
 
-{ "D61" [Sphere: x=-14   y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	} 
-{ "D62" [Sphere: x=-13.2 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	} 
-{ "D63" [Sphere: x=-12.4 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	} 
-{ "D64" [Sphere: x=-11.6 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	} 
-{ "D65" [Sphere: x=-10.8 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	} 
+{ "D61" [Sphere: x=-14   y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	}
+{ "D62" [Sphere: x=-13.2 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	}
+{ "D63" [Sphere: x=-12.4 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	}
+{ "D64" [Sphere: x=-11.6 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	}
+{ "D65" [Sphere: x=-10.8 y=-4.95 z=3 r=0.2] CTMAT(1.05) 		REL	}
 
-{ "D71" [Sphere: x=-14   y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	} 
-{ "D72" [Sphere: x=-13.4 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	} 
-{ "D73" [Sphere: x=-12.8 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	} 
-{ "D74" [Sphere: x=-12.2 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	} 
-{ "D75" [Sphere: x=-11.6 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	} 
+{ "D71" [Sphere: x=-14   y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	}
+{ "D72" [Sphere: x=-13.4 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	}
+{ "D73" [Sphere: x=-12.8 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	}
+{ "D74" [Sphere: x=-12.2 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	}
+{ "D75" [Sphere: x=-11.6 y=-5.55 z=3 r=0.15] CTMAT(1.05) 		REL	}
 
-{ "D81" [Sphere: x=-14   y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	} 
-{ "D82" [Sphere: x=-13.6 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	} 
-{ "D83" [Sphere: x=-13.2 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	} 
-{ "D84" [Sphere: x=-12.8 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	} 
-{ "D85" [Sphere: x=-12.4 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	} 
+{ "D81" [Sphere: x=-14   y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	}
+{ "D82" [Sphere: x=-13.6 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	}
+{ "D83" [Sphere: x=-13.2 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	}
+{ "D84" [Sphere: x=-12.8 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	}
+{ "D85" [Sphere: x=-12.4 y=-6 z=3 r=0.1] CTMAT(1.05) 			REL	}
 
 /* ++++ liquid / air surface ++++++++++++++++++++++++++++++++++++++++++	*/
 { "E1" [Ellipt_Cyl_z: y=6 dx=3 dy=2 l=20 ] CTMAT(1.06)		REL	}
@@ -130,9 +130,9 @@ Wirbelkoerper(0, -7, 10, KORTIKALIS, SPONGIOSA, 4)
 
 /* ++++ ribs ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	*/
 { "F1" [Ellipt_Cyl: y=0 x=-18 z=0 dx=0.4 dy=0.4 l=8
-       achse(0, sin(60), cos(60)) a_x(1, 0, 0)] CTMAT(2.0) 		REL	}
+       axis(0, sin(60), cos(60)) a_x(1, 0, 0)] CTMAT(2.0) 		REL	}
 { "F2" [Ellipt_Cyl: y=0 x= 18 z=0 dx=0.4 dy=0.4 l=8
-       achse(0, sin(60), cos(60)) a_x(1, 0, 0)] CTMAT(2.0) 		REL	}
+       axis(0, sin(60), cos(60)) a_x(1, 0, 0)] CTMAT(2.0) 		REL	}
 
 /* ++++ high contrast objects +++++++++++++++++++++++++++++++++++++++++	*/
 { "G00" [Box: y=1 x=12-3.0/10 z=0 dx=0.5/10 dy=1 dz=2] CTMAT(2.0)	 REL	}
