@@ -1,0 +1,176 @@
+# 1 "AbdomenPhantom.pha"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "AbdomenPhantom.pha"
+
+
+
+
+# 1 "TableOfTissues" 1
+# 6 "AbdomenPhantom.pha" 2
+# 1 "Vertebra.pha" 1
+# 7 "AbdomenPhantom.pha" 2
+
+
+
+
+
+
+Phantom
+
+{ "A1" [Ellipt_Cyl_z: dx=20 dy=12 l=100 ] formel=H2O rho=1.000 }
+
+
+{ "B2" [Ellipsoid_free: x=-10 y=0 dx=8 dy=7 dz=10
+                       a_x(+0.500000, +0.866025,0) a_z(0,0,1) ]
+             formel=H2O rho=1.06 }
+
+
+Phantom{ [ Cylinder_z: x=0 y=-7 z=-10 l=4 r=1.75 r(0,1,0)>-8.350000 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-8.400000 z=-10 dx=+2.343074 dy=0.2 dz=4 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-7 z=-10 l=4 r=1.5 ] formula=H2O rho=1.180 } { [ Box: x=-2.000000 y=-8.975000 z=-10 dx=4 dy=0.95 dz=4 r(-0.95,+2.828463,0) < -7.684642 r(-2,32,0)>-9.182084 union=-2 ] formula=H2O rho=1.920 } { [ Box: x=+2.000000 y=-8.975000 z=-10 dx=4 dy=0.95 dz=4 r(0.95,+2.828463,0) < -7.684642 r(2,32,0)>-9.182084 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-9.350000 z=-10 dx=1.6 dy=0.3 dz=4 r(-2,4,0) > -8.631222 r(-2,-4,0) < +8.631222 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-11.050000 z=-10 l=4 r=0.4 y<-11.050000 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-10.250000 z=-10 dx=0.8 dy=1.6 dz=4 union=-1 ] formula=H2O rho=1.920 }
+Phantom{ [ Cylinder_z: x=0 y=-7 z=-5 l=4 r=1.75 r(0,1,0)>-8.350000 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-8.400000 z=-5 dx=+2.343074 dy=0.2 dz=4 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-7 z=-5 l=4 r=1.5 ] formula=H2O rho=1.180 } { [ Box: x=-2.000000 y=-8.975000 z=-5 dx=4 dy=0.95 dz=4 r(-0.95,+2.828463,0) < -7.684642 r(-2,32,0)>-9.182084 union=-2 ] formula=H2O rho=1.920 } { [ Box: x=+2.000000 y=-8.975000 z=-5 dx=4 dy=0.95 dz=4 r(0.95,+2.828463,0) < -7.684642 r(2,32,0)>-9.182084 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-9.350000 z=-5 dx=1.6 dy=0.3 dz=4 r(-2,4,0) > -8.631222 r(-2,-4,0) < +8.631222 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-11.050000 z=-5 l=4 r=0.4 y<-11.050000 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-10.250000 z=-5 dx=0.8 dy=1.6 dz=4 union=-1 ] formula=H2O rho=1.920 }
+Phantom{ [ Cylinder_z: x=0 y=-7 z=0 l=4 r=1.75 r(0,1,0)>-8.350000 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-8.400000 z=0 dx=+2.343074 dy=0.2 dz=4 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-7 z=0 l=4 r=1.5 ] formula=H2O rho=1.180 } { [ Box: x=-2.000000 y=-8.975000 z=0 dx=4 dy=0.95 dz=4 r(-0.95,+2.828463,0) < -7.684642 r(-2,32,0)>-9.182084 union=-2 ] formula=H2O rho=1.920 } { [ Box: x=+2.000000 y=-8.975000 z=0 dx=4 dy=0.95 dz=4 r(0.95,+2.828463,0) < -7.684642 r(2,32,0)>-9.182084 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-9.350000 z=0 dx=1.6 dy=0.3 dz=4 r(-2,4,0) > -8.631222 r(-2,-4,0) < +8.631222 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-11.050000 z=0 l=4 r=0.4 y<-11.050000 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-10.250000 z=0 dx=0.8 dy=1.6 dz=4 union=-1 ] formula=H2O rho=1.920 }
+Phantom{ [ Cylinder_z: x=0 y=-7 z=5 l=4 r=1.75 r(0,1,0)>-8.350000 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-8.400000 z=5 dx=+2.343074 dy=0.2 dz=4 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-7 z=5 l=4 r=1.5 ] formula=H2O rho=1.180 } { [ Box: x=-2.000000 y=-8.975000 z=5 dx=4 dy=0.95 dz=4 r(-0.95,+2.828463,0) < -7.684642 r(-2,32,0)>-9.182084 union=-2 ] formula=H2O rho=1.920 } { [ Box: x=+2.000000 y=-8.975000 z=5 dx=4 dy=0.95 dz=4 r(0.95,+2.828463,0) < -7.684642 r(2,32,0)>-9.182084 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-9.350000 z=5 dx=1.6 dy=0.3 dz=4 r(-2,4,0) > -8.631222 r(-2,-4,0) < +8.631222 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-11.050000 z=5 l=4 r=0.4 y<-11.050000 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-10.250000 z=5 dx=0.8 dy=1.6 dz=4 union=-1 ] formula=H2O rho=1.920 }
+Phantom{ [ Cylinder_z: x=0 y=-7 z=10 l=4 r=1.75 r(0,1,0)>-8.350000 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-8.400000 z=10 dx=+2.343074 dy=0.2 dz=4 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-7 z=10 l=4 r=1.5 ] formula=H2O rho=1.180 } { [ Box: x=-2.000000 y=-8.975000 z=10 dx=4 dy=0.95 dz=4 r(-0.95,+2.828463,0) < -7.684642 r(-2,32,0)>-9.182084 union=-2 ] formula=H2O rho=1.920 } { [ Box: x=+2.000000 y=-8.975000 z=10 dx=4 dy=0.95 dz=4 r(0.95,+2.828463,0) < -7.684642 r(2,32,0)>-9.182084 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-9.350000 z=10 dx=1.6 dy=0.3 dz=4 r(-2,4,0) > -8.631222 r(-2,-4,0) < +8.631222 union=-1 ] formula=H2O rho=1.920 } { [ Cylinder_z: x=0 y=-11.050000 z=10 l=4 r=0.4 y<-11.050000 union=-1 ] formula=H2O rho=1.920 } { [ Box: x=0 y=-10.250000 z=10 dx=0.8 dy=1.6 dz=4 union=-1 ] formula=H2O rho=1.920 }
+
+
+{ "C11" [Sphere: x=-14 y=1.2 r=0.6] formel=H2O rho=1.05 }
+{ "C12" [Sphere: x=-11.6 y=1.2 r=0.6] formel=H2O rho=1.05 }
+{ "C13" [Sphere: x= -9.2 y=1.2 r=0.6] formel=H2O rho=1.05 }
+{ "C14" [Sphere: x=-6.8 y=1.2 r=0.6] formel=H2O rho=1.05 }
+{ "C15" [Sphere: x=-4.4 y=1.2 r=0.6] formel=H2O rho=1.05 }
+
+{ "C21" [Sphere: x=-14 y=-0.6 r=0.5] formel=H2O rho=1.05 }
+{ "C22" [Sphere: x=-12 y=-0.6 r=0.5] formel=H2O rho=1.05 }
+{ "C23" [Sphere: x=-10 y=-0.6 r=0.5] formel=H2O rho=1.05 }
+{ "C24" [Sphere: x=-8 y=-0.6 r=0.5] formel=H2O rho=1.05 }
+{ "C25" [Sphere: x=-6 y=-0.6 r=0.5] formel=H2O rho=1.05 }
+
+{ "C31" [Sphere: x=-14 y=-2.1 r=0.4] formel=H2O rho=1.05 }
+{ "C32" [Sphere: x=-12.4 y=-2.1 r=0.4] formel=H2O rho=1.05 }
+{ "C33" [Sphere: x=-10.8 y=-2.1 r=0.4] formel=H2O rho=1.05 }
+{ "C34" [Sphere: x=-9.2 y=-2.1 r=0.4] formel=H2O rho=1.05 }
+{ "C35" [Sphere: x=-7.6 y=-2.1 r=0.4] formel=H2O rho=1.05 }
+
+{ "C41" [Sphere: x=-14 y=-3.3 r=0.3] formel=H2O rho=1.05 }
+{ "C42" [Sphere: x=-12.8 y=-3.3 r=0.3] formel=H2O rho=1.05 }
+{ "C43" [Sphere: x=-11.6 y=-3.3 r=0.3] formel=H2O rho=1.05 }
+{ "C44" [Sphere: x=-10.4 y=-3.3 r=0.3] formel=H2O rho=1.05 }
+{ "C45" [Sphere: x=-9.2 y=-3.3 r=0.3] formel=H2O rho=1.05 }
+
+{ "C51" [Sphere: x=-14 y=-4.2 r=0.25] formel=H2O rho=1.05 }
+{ "C52" [Sphere: x=-13 y=-4.2 r=0.25] formel=H2O rho=1.05 }
+{ "C53" [Sphere: x=-12 y=-4.2 r=0.25] formel=H2O rho=1.05 }
+{ "C54" [Sphere: x=-11 y=-4.2 r=0.25] formel=H2O rho=1.05 }
+{ "C55" [Sphere: x=-10 y=-4.2 r=0.25] formel=H2O rho=1.05 }
+
+{ "C61" [Sphere: x=-14 y=-4.95 r=0.2] formel=H2O rho=1.05 }
+{ "C62" [Sphere: x=-13.2 y=-4.95 r=0.2] formel=H2O rho=1.05 }
+{ "C63" [Sphere: x=-12.4 y=-4.95 r=0.2] formel=H2O rho=1.05 }
+{ "C64" [Sphere: x=-11.6 y=-4.95 r=0.2] formel=H2O rho=1.05 }
+{ "C65" [Sphere: x=-10.8 y=-4.95 r=0.2] formel=H2O rho=1.05 }
+
+{ "C71" [Sphere: x=-14 y=-5.55 r=0.15] formel=H2O rho=1.05 }
+{ "C72" [Sphere: x=-13.4 y=-5.55 r=0.15] formel=H2O rho=1.05 }
+{ "C73" [Sphere: x=-12.8 y=-5.55 r=0.15] formel=H2O rho=1.05 }
+{ "C74" [Sphere: x=-12.2 y=-5.55 r=0.15] formel=H2O rho=1.05 }
+{ "C75" [Sphere: x=-11.6 y=-5.55 r=0.15] formel=H2O rho=1.05 }
+
+{ "C81" [Sphere: x=-14 y=-6 r=0.1] formel=H2O rho=1.05 }
+{ "C82" [Sphere: x=-13.6 y=-6 r=0.1] formel=H2O rho=1.05 }
+{ "C83" [Sphere: x=-13.2 y=-6 r=0.1] formel=H2O rho=1.05 }
+{ "C84" [Sphere: x=-12.8 y=-6 r=0.1] formel=H2O rho=1.05 }
+{ "C85" [Sphere: x=-12.4 y=-6 r=0.1] formel=H2O rho=1.05 }
+
+
+{ "D11" [Sphere: x=-14 y=1.2 z=3 r=0.6] formel=H2O rho=1.05 }
+{ "D12" [Sphere: x=-11.6 y=1.2 z=3 r=0.6] formel=H2O rho=1.05 }
+{ "D13" [Sphere: x= -9.2 y=1.2 z=3 r=0.6] formel=H2O rho=1.05 }
+{ "D14" [Sphere: x=-6.8 y=1.2 z=3 r=0.6] formel=H2O rho=1.05 }
+{ "D15" [Sphere: x=-4.4 y=1.2 z=3 r=0.6] formel=H2O rho=1.05 }
+
+{ "D21" [Sphere: x=-14 y=-0.6 z=3 r=0.5] formel=H2O rho=1.05 }
+{ "D22" [Sphere: x=-12 y=-0.6 z=3 r=0.5] formel=H2O rho=1.05 }
+{ "D23" [Sphere: x=-10 y=-0.6 z=3 r=0.5] formel=H2O rho=1.05 }
+{ "D24" [Sphere: x=-8 y=-0.6 z=3 r=0.5] formel=H2O rho=1.05 }
+{ "D25" [Sphere: x=-6 y=-0.6 z=3 r=0.5] formel=H2O rho=1.05 }
+
+{ "D31" [Sphere: x=-14 y=-2.1 z=3 r=0.4] formel=H2O rho=1.05 }
+{ "D32" [Sphere: x=-12.4 y=-2.1 z=3 r=0.4] formel=H2O rho=1.05 }
+{ "D33" [Sphere: x=-10.8 y=-2.1 z=3 r=0.4] formel=H2O rho=1.05 }
+{ "D34" [Sphere: x=-9.2 y=-2.1 z=3 r=0.4] formel=H2O rho=1.05 }
+{ "D35" [Sphere: x=-7.6 y=-2.1 z=3 r=0.4] formel=H2O rho=1.05 }
+
+{ "D41" [Sphere: x=-14 y=-3.3 z=3 r=0.3] formel=H2O rho=1.05 }
+{ "D42" [Sphere: x=-12.8 y=-3.3 z=3 r=0.3] formel=H2O rho=1.05 }
+{ "D43" [Sphere: x=-11.6 y=-3.3 z=3 r=0.3] formel=H2O rho=1.05 }
+{ "D44" [Sphere: x=-10.4 y=-3.3 z=3 r=0.3] formel=H2O rho=1.05 }
+{ "D45" [Sphere: x=-9.2 y=-3.3 z=3 r=0.3] formel=H2O rho=1.05 }
+
+{ "D51" [Sphere: x=-14 y=-4.2 z=3 r=0.25] formel=H2O rho=1.05 }
+{ "D52" [Sphere: x=-13 y=-4.2 z=3 r=0.25] formel=H2O rho=1.05 }
+{ "D53" [Sphere: x=-12 y=-4.2 z=3 r=0.25] formel=H2O rho=1.05 }
+{ "D54" [Sphere: x=-11 y=-4.2 z=3 r=0.25] formel=H2O rho=1.05 }
+{ "D55" [Sphere: x=-10 y=-4.2 z=3 r=0.25] formel=H2O rho=1.05 }
+
+{ "D61" [Sphere: x=-14 y=-4.95 z=3 r=0.2] formel=H2O rho=1.05 }
+{ "D62" [Sphere: x=-13.2 y=-4.95 z=3 r=0.2] formel=H2O rho=1.05 }
+{ "D63" [Sphere: x=-12.4 y=-4.95 z=3 r=0.2] formel=H2O rho=1.05 }
+{ "D64" [Sphere: x=-11.6 y=-4.95 z=3 r=0.2] formel=H2O rho=1.05 }
+{ "D65" [Sphere: x=-10.8 y=-4.95 z=3 r=0.2] formel=H2O rho=1.05 }
+
+{ "D71" [Sphere: x=-14 y=-5.55 z=3 r=0.15] formel=H2O rho=1.05 }
+{ "D72" [Sphere: x=-13.4 y=-5.55 z=3 r=0.15] formel=H2O rho=1.05 }
+{ "D73" [Sphere: x=-12.8 y=-5.55 z=3 r=0.15] formel=H2O rho=1.05 }
+{ "D74" [Sphere: x=-12.2 y=-5.55 z=3 r=0.15] formel=H2O rho=1.05 }
+{ "D75" [Sphere: x=-11.6 y=-5.55 z=3 r=0.15] formel=H2O rho=1.05 }
+
+{ "D81" [Sphere: x=-14 y=-6 z=3 r=0.1] formel=H2O rho=1.05 }
+{ "D82" [Sphere: x=-13.6 y=-6 z=3 r=0.1] formel=H2O rho=1.05 }
+{ "D83" [Sphere: x=-13.2 y=-6 z=3 r=0.1] formel=H2O rho=1.05 }
+{ "D84" [Sphere: x=-12.8 y=-6 z=3 r=0.1] formel=H2O rho=1.05 }
+{ "D85" [Sphere: x=-12.4 y=-6 z=3 r=0.1] formel=H2O rho=1.05 }
+
+
+{ "E1" [Ellipt_Cyl_z: y=6 dx=3 dy=2 l=20 ] formel=H2O rho=1.06 }
+{ "E2" [Ellipt_Cyl_z: y=6 dx=3 dy=2 l=20 y>6.5] formel=H2O rho=0 }
+
+
+{ "F1" [Ellipt_Cyl: y=0 x=-18 z=0 dx=0.4 dy=0.4 l=8
+       axis(0, +0.866025, +0.500000) a_x(1, 0, 0)] formel=H2O rho=2.0 }
+{ "F2" [Ellipt_Cyl: y=0 x= 18 z=0 dx=0.4 dy=0.4 l=8
+       axis(0, +0.866025, +0.500000) a_x(1, 0, 0)] formel=H2O rho=2.0 }
+
+
+{ "G00" [Box: y=1 x=+11.700000 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G01" [Box: y=1 x=+11.800000 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G02" [Box: y=1 x=+11.900000 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G03" [Box: y=1 x=12 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G04" [Box: y=1 x=+12.100000 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G05" [Box: y=1 x=+12.200000 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G06" [Box: y=1 x=+12.300000 z=0 dx=+0.050000 dy=1 dz=2] formel=H2O rho=2.0 }
+
+{ "G10" [Box: y=1 x=+13.750000 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G11" [Box: y=1 x=+13.833333 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G12" [Box: y=1 x=+13.916667 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G13" [Box: y=1 x=14 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G14" [Box: y=1 x=+14.083333 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G15" [Box: y=1 x=+14.166667 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+{ "G16" [Box: y=1 x=+14.250000 z=0 dx=+0.041667 dy=1 dz=2] formel=H2O rho=2.0 }
+
+{ "G20" [Box: y=-1.300000 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+{ "G21" [Box: y=-1.200000 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+{ "G22" [Box: y=-1.100000 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+{ "G23" [Box: y=-1 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+{ "G24" [Box: y=-0.900000 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+{ "G25" [Box: y=-0.800000 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+{ "G26" [Box: y=-0.700000 x=12 z=0 dx=1 dy=+0.050000 dz=2] formel=H2O rho=2.0 }
+
+{ "G30" [Box: y=-1.250000 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }
+{ "G31" [Box: y=-1.166667 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }
+{ "G32" [Box: y=-1.083333 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }
+{ "G33" [Box: y=-1 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }
+{ "G34" [Box: y=-0.916667 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }
+{ "G35" [Box: y=-0.833333 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }
+{ "G36" [Box: y=-0.750000 x=14 z=0 dx=1 dy=+0.041667 dz=2] formel=H2O rho=2.0 }

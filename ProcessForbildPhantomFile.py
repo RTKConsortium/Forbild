@@ -2,8 +2,8 @@ import re
 import os
 import numpy as np
 
-f = open('Thorax', 'w')
-with os.popen("gcc -E -x c++ ThoraxPhantom.pha") as pipe:
+f = open('Abdomen', 'w')
+with os.popen("gcc -E -x c++ AbdomenPhantom.pha") as pipe:
     for line in pipe:
         while True:
             (line, n1) = re.subn(r'cos\(([\-+*/0-9\. ]*)\)', lambda m: "%+f" % (np.cos(np.deg2rad(eval(m.group(1))))), line)   # cos
